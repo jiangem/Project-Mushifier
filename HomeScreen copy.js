@@ -33,39 +33,39 @@ export default class HomeScreen extends React.Component {
         }
         style={{width: '100%', height: '100%'}}>
 
-        <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'center', paddingTop: 350}}>
+        <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'center', paddingTop: 380}}>
 
           <Image source={
             require('../assets/images/fp_camera.png')
           }
-          style={{width: 135, height: 135}}>
+          style={{width: 150, height: 150}}>
           </Image>
 
         </View>
 
 
-        <View style={{flex: 2, flexDirection:'row', justifyContent: 'space-between', alignItems: 'center', paddingBottom: 150, paddingLeft: 30, paddingRight: 30}}>
+        <View style={{flex: 2, flexDirection:'row', justifyContent: 'space-between', alignItems: 'center', paddingTop: 80, paddingLeft: 15, paddingRight: 15}}>
 
           <Image source={
             require('../assets/images/fp_gallery.png')
           }
-          style={{width: 135, height: 135}}>
+          style={{width: 120, height: 120}}>
           </Image>
 
           <Image source={
             require('../assets/images/fp_index.png')
           }
-          style={{width: 135, height: 135}}>
+          style={{width: 120, height: 120}}>
           </Image>
 
         </View>
 
-        <View style={{flex: 3, flexDirection:'row', justifyContent: 'center', alignItems: 'center', paddingBottom: 300}}>
+        <View style={{flex: 3, flexDirection:'row', justifyContent: 'space-around', alignItems: 'center', paddingBottom: 180}}>
 
           <Image source={
             require('../assets/images/fp_search.png')
           }
-          style={{width: 135, height: 135}}>
+          style={{width: 120, height: 120}}>
           </Image>
 
         </View>
