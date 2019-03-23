@@ -18,6 +18,7 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
+    headerBackTitle: 'Home',
   };
   render() {
     const {navigate} = this.props.navigation;

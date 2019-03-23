@@ -15,6 +15,23 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 import { Camera, Permissions } from 'expo';
 
 class CameraScreen extends React.Component {
+  static navigationOptions = {
+        title: 'Camera',
+        headerStyle: {
+          backgroundColor: '#4C3D35',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+            fontWeight: 'bold',
+            fontFamily: 'Noteworthy-Bold'
+        },
+        headerBackTitle: 'Home',
+        headerBackTitleStyle: {
+            fontWeight: 'bold',
+            fontFamily: 'Noteworthy-Bold'
+        },
+
+    };
   state = {
     hasCameraPermission: null,
     type: Camera.Constants.Type.back,
