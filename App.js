@@ -14,6 +14,10 @@ import { WebBrowser } from 'expo';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import HomeScreen from './component/HomeScreen'
 import CameraScreen from './component/CameraScreen.js'
+import CamerarollScreen from './component/CamerarollScreen.js'
+import IndexScreen from './component/IndexScreen.js'
+import SearchScreen from './component/SearchScreen.js'
+
 
 const styles = StyleSheet.create({
   bigBlue: {
@@ -26,6 +30,9 @@ const styles = StyleSheet.create({
 const MainNavigator = createStackNavigator({
   Home: {screen: HomeScreen},
   Camera: {screen: CameraScreen},
+  Search: {screen: SearchScreen},
+  Cameraroll: {screen: CamerarollScreen},
+  Index: {screen:IndexScreen}
 });
 
 const App = createAppContainer(MainNavigator);
