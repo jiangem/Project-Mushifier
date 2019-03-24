@@ -9,6 +9,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  CameraRoll,
 } from 'react-native';
 import { WebBrowser } from 'expo';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
@@ -35,6 +36,7 @@ class CameraScreen extends React.Component {
   state = {
     hasCameraPermission: null,
     type: Camera.Constants.Type.back,
+    capture: [],
   };
 
   async componentDidMount() {
@@ -42,8 +44,19 @@ class CameraScreen extends React.Component {
     this.setState({ hasCameraPermission: status === 'granted' });
   }
 
+  snap = async () => {
+      if (this.camera) {
+          const photo = await this.camera.takePictureAsync();
+          this.setState({capture:[photo, ... this.state.capture]});
+          console.log(photo);
+          console.log(this.state.capture);
+          CameraRoll.saveToCameraRoll(photo["uri"]);
+      }
+  };
+
   render() {
     const { hasCameraPermission } = this.state;
+
     if (hasCameraPermission === null) {
       return <View />;
     } else if (hasCameraPermission === false) {
@@ -51,7 +64,7 @@ class CameraScreen extends React.Component {
     } else {
       return (
         <View style={{ flex: 1 }}>
-          <Camera style={{ flex: 1 }} type={this.state.type}>
+          <Camera style={{ flex: 1 }} type={this.state.type} ref={ref => { this.camera = ref; }}>
             <View
               style={{
                 flex: 1,
@@ -59,6 +72,39 @@ class CameraScreen extends React.Component {
                 flexDirection: 'row',
               }}>
               <TouchableOpacity
+                style= {{
+                   flex: 1,
+                   flexDirection: 'row',
+                   justifyContent: 'center',
+                   alignItems: 'flex-end'
+                }}
+                onPress={() => {
+                  {this.snap()}
+                }}>
+                <View style={{
+                    width: 60,
+                    height: 60,
+                    borderWidth: 2,
+                    borderRadius: 60,
+                    borderColor: "#FFFFFF",
+
+                }}>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </Camera>
+        </View>
+      );
+    }
+  }
+}
+
+
+
+
+export default CameraScreen
+
+/*<TouchableOpacity
                 style={{
                   flex: 0.1,
                   alignSelf: 'flex-end',
@@ -75,16 +121,7 @@ class CameraScreen extends React.Component {
                   style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
                   {' '}Flip{' '}
                 </Text>
-              </TouchableOpacity>
-            </View>
-          </Camera>
-        </View>
-      );
-    }
-  }
-}
-
-export default CameraScreen
+              </TouchableOpacity>*/
 
 /*class CameraScreen extends React.Component {
   static navigationOptions = {
