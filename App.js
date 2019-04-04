@@ -17,6 +17,7 @@ import CameraScreen from './component/CameraScreen.js'
 import CamerarollScreen from './component/CamerarollScreen.js'
 import IndexScreen from './component/IndexScreen.js'
 import SearchScreen from './component/SearchScreen.js'
+import PredictorScreen from './component/PredictorScreen.js'
 
 
 const styles = StyleSheet.create({
@@ -32,7 +33,8 @@ const MainNavigator = createStackNavigator({
   Camera: {screen: CameraScreen},
   Search: {screen: SearchScreen},
   Cameraroll: {screen: CamerarollScreen},
-  Index: {screen:IndexScreen}
+  Index: {screen:IndexScreen},
+  Predictor:{screen:PredictorScreen}
 });
 
 const App = createAppContainer(MainNavigator);
