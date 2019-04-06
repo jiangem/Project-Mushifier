@@ -31,7 +31,7 @@ export default class HomeScreen extends React.Component {
         }
         style={{width: '100%', height: '100%'}}>
 
-        <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'center', paddingTop: 380}}>
+        <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'center', paddingTop: 320}}>
 
           <Image source={
             require('./assets/images/fp_camera.png')
