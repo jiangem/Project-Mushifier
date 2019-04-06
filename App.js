@@ -11,6 +11,13 @@ import {
   View,
 } from 'react-native';
 import { WebBrowser } from 'expo';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
+import HomeScreen from './component/HomeScreen'
+import CameraScreen from './component/CameraScreen.js'
+import CamerarollScreen from './component/CamerarollScreen.js'
+import IndexScreen from './component/IndexScreen.js'
+import SearchScreen from './component/SearchScreen.js'
+
 
 const styles = StyleSheet.create({
   bigBlue: {
@@ -20,7 +27,19 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class HomeScreen extends React.Component {
+const MainNavigator = createStackNavigator({
+  Home: {screen: HomeScreen},
+  Camera: {screen: CameraScreen},
+  Search: {screen: SearchScreen},
+  Cameraroll: {screen: CamerarollScreen},
+  Index: {screen:IndexScreen}
+});
+
+const App = createAppContainer(MainNavigator);
+
+export default App;
+
+/*class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -31,7 +50,11 @@ export default class HomeScreen extends React.Component {
         }
         style={{width: '100%', height: '100%'}}>
 
+<<<<<<< HEAD
         <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'center', paddingTop: 320}}>
+=======
+        <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'center', paddingTop: 330}}>
+>>>>>>> d069a3a31d775bb912903eb83b89faa1ec4312ee
 
           <Image source={
             require('./assets/images/fp_camera.png')
@@ -71,3 +94,9 @@ export default class HomeScreen extends React.Component {
     );
   }
 }
+
+class CameraScreen extends React.Component {
+
+}*/
+
+
