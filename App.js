@@ -52,7 +52,11 @@ export default App;
         }
         style={{width: '100%', height: '100%'}}>
 
+<<<<<<< HEAD
+        <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'center', paddingTop: 320}}>
+=======
         <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'center', paddingTop: 330}}>
+>>>>>>> d069a3a31d775bb912903eb83b89faa1ec4312ee
 
           <Image source={
             require('./assets/images/fp_camera.png')

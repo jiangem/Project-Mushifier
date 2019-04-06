@@ -50,7 +50,8 @@ class CameraScreen extends React.Component {
           this.setState({capture:[photo, ... this.state.capture]});
           console.log(photo);
           console.log(this.state.capture);
-          CameraRoll.saveToCameraRoll(photo["uri"]);
+          //CameraRoll.saveToCameraRoll(photo["uri"]);
+          this.props.navigation.navigate('Predictor', {image: photo['uri']});
       }
   };
 
