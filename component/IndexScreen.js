@@ -35,10 +35,100 @@ class IndexScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor:'#4C3D35' }}>
-        <Text style= {{fontFamily: 'Noteworthy-Bold', fontSize: 50, color:'white'}}>
-        Hello
-         text is written in Noteworthy
-        </Text>
+        <ScrollView>
+          <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'flex-end'}}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+              <Image source={require('../assets/images/index/Agaricaceae.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+              <Image source={require('../assets/images/index/Agaricales.jpg')} style={{width: 190, height: 190}}/>
+             </TouchableOpacity>
+          </View>
+          <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'flex-end'}}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+              <Image source={require('../assets/images/index/Agaricus_s.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+              <Image source={require('../assets/images/index/Agaricus_xanthodermus.jpg')} style={{width: 190, height: 190}}/>   
+            </TouchableOpacity>
+          </View>
+          <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'flex-end'}}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+              <Image source={require('../assets/images/index/Amanita_sec.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+              <Image source={require('../assets/images/index/Armillaria.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+             </View>
+          <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'flex-end'}}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+              <Image source={require('../assets/images/index/Armillaria_mellea.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+              <Image source={require('../assets/images/index/Bolbitius_titubans.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+             </View>
+          <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'flex-end'}}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+            
+              <Image source={require('../assets/images/index/Hericium_erinaceus.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+               <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+            
+              <Image source={require('../assets/images/index/Agaricaceae.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+             </View>
+          <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'flex-end'}}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+            
+              <Image source={require('../assets/images/index/Agaricaceae.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+               <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+            
+              <Image source={require('../assets/images/index/Agaricaceae.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+             </View>
+          <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'flex-end'}}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+            
+              <Image source={require('../assets/images/index/Agaricaceae.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+               <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+            
+              <Image source={require('../assets/images/index/Agaricaceae.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+             </View>
+          <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'flex-end'}}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+            
+              <Image source={require('../assets/images/index/Agaricaceae.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+               <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+            
+              <Image source={require('../assets/images/index/Agaricaceae.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+             </View>
+          <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'flex-end'}}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+            
+              <Image source={require('../assets/images/index/Agaricaceae.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+               <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+            
+              <Image source={require('../assets/images/index/Agaricaceae.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+             </View>
+          <View style={{flex: 1, flexDirection:'row', justifyContent: 'space-evenly', alignItems: 'flex-end'}}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+            
+              <Image source={require('../assets/images/index/Agaricaceae.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+               <TouchableOpacity onPress={() => this.props.navigation.navigate('Camera')}>
+            
+              <Image source={require('../assets/images/index/Agaricaceae.jpg')} style={{width: 190, height: 190}}/>
+            </TouchableOpacity>
+             </View>
+        </ScrollView>
       </View>
     );
   }
