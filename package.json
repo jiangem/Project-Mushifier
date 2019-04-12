@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@tensorflow/tfjs": "^1.0.4",
+    "child-process": "^1.0.2",
+    "event": "^1.0.0",
+    "events": "^3.0.0",
     "expo": "^30.0.1",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",

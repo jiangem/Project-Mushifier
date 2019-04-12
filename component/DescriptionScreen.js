@@ -15,9 +15,9 @@ import {
 import { WebBrowser } from 'expo';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
-class PredictorScreen extends React.Component {
+class DescriptionScreen extends React.Component {
   static navigationOptions = {
-        title: 'Predictor',
+        title: 'Description',
         headerStyle: {
           backgroundColor: '#4C3D35',
         },
@@ -26,25 +26,21 @@ class PredictorScreen extends React.Component {
             fontWeight: 'bold',
             fontFamily: 'Noteworthy-Bold'
         },
-        headerBackTitle: 'Camera',
+        headerBackTitle: 'Home',
         headerBackTitleStyle: {
-            fontWeight: 'bold',
-            fontFamily: 'Noteworthy-Bold'
-        },
+                    fontWeight: 'bold',
+                    fontFamily: 'Noteworthy-Bold'
+                },
 
     };
   render() {
-    const image = this.props.navigation.getParam('image', '../assets/images/fp_index.png');
-    console.log(typeof image);
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor:'#4C3D35' }}>
-        <Image source={
-          {uri:image}
-          } style={{width: 250, height: 400}}>
-        </Image>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor:'#4C3D35'  }}>
+        <Text style= {{fontFamily: 'Noteworthy-Bold', fontSize: 50, color:'white'}}> Hi Cibi
+        </Text>
       </View>
     );
   }
 }
 
-export default PredictorScreen;
+export default DescriptionScreen;

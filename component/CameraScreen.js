@@ -26,7 +26,7 @@ class CameraScreen extends React.Component {
             fontWeight: 'bold',
             fontFamily: 'Noteworthy-Bold'
         },
-        headerBackTitle: 'Home',
+        headerBackTitle: 'Camera',
         headerBackTitleStyle: {
             fontWeight: 'bold',
             fontFamily: 'Noteworthy-Bold'

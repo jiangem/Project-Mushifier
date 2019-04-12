@@ -53,6 +53,10 @@ export default class SearchScreen extends React.Component {
 
   render() {
     return (
+      <ImageBackground source={
+        require('../assets/images/back.png')
+      }
+      style={{width: '100%', height: '90%'}}>
       <View>
         <View style={{ marginTop: 70 }}>
           {
@@ -64,17 +68,9 @@ export default class SearchScreen extends React.Component {
               );
             })
           }
-          <ImageBackground source={
-               require('../assets/images/back.png')
-             }
-             style={{width: '100%', height: '90%'}}>
-          </ImageBackground>
-          <TouchableOpacity onPress={() => this.searchBar.show()}>
-            <View style={{ backgroundColor: 'green', height: 80, marginTop: 50 }}/>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => this.searchBar.hide()}>
-            <View style={{ backgroundColor: 'red', height: 80 }}/>
-          </TouchableOpacity>
+          
+          
+          
         </View>
         <SearchBar
           ref={(ref) => this.searchBar = ref}
@@ -85,6 +81,7 @@ export default class SearchScreen extends React.Component {
           placeholder='ex. Amanita'
         />
       </View>
+      </ImageBackground>
 
     );
   }
@@ -132,4 +129,12 @@ const styles = StyleSheet.create({
   }
 }
 
-export default SearchScreen;*/
+export default SearchScreen;
+
+<TouchableOpacity onPress={() => this.searchBar.show()}>
+            <View style={{ backgroundColor: 'green', height: 80, marginTop: 50 }}/>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => this.searchBar.hide()}>
+            <View style={{ backgroundColor: 'red', height: 80 }}/>
+          </TouchableOpacity>
+*/
