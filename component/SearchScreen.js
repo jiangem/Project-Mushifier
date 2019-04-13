@@ -45,10 +45,15 @@ export default class SearchScreen extends React.Component {
       results: []
     };
     this._handleResults = this._handleResults.bind(this);
+    this.counter = { count: 0 }
   }
 
   _handleResults(results) {
     this.setState({ results });
+  }
+
+  _onPress = () => {
+    this.props.navigation.navigate('Description')
   }
 
   render() {
@@ -56,22 +61,24 @@ export default class SearchScreen extends React.Component {
       <ImageBackground source={
         require('../assets/images/back.png')
       }
-      style={{width: '100%', height: '90%'}}>
+      style={{width: '100%', height: '100%'}}>
       <View>
-        <View style={{ marginTop: 70 }}>
+        <ScrollView style={{ marginTop: 60 }}>
           {
             this.state.results.map((result, i) => {
               return (
-                <Text key={i}>
-                  {typeof result === 'object' && !(result instanceof Array) ? 'gold object!' : result.toString()}
-                </Text>
+                <TouchableHighlight
+                  style={styles.button}
+                  onPress={this._onPress}
+                >
+                  <Text key={i}>
+                    {result.toString()}
+                  </Text>
+                </TouchableHighlight>
               );
             })
           }
-          
-          
-          
-        </View>
+        </ScrollView>
         <SearchBar
           ref={(ref) => this.searchBar = ref}
           data={items}
@@ -97,6 +104,11 @@ const styles = StyleSheet.create({
         alignItems: "center"
         //flexDirection: 'row',
         //height: 100
+    },
+    button: {
+        alignItems: 'stretch',
+        backgroundColor: '#DDDDDD',
+        padding: 10
     }
 })
 
