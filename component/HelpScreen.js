@@ -15,9 +15,9 @@ import {
 import { WebBrowser } from 'expo';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
-class DescriptionScreen extends React.Component {
+class HelpScreen extends React.Component {
   static navigationOptions = {
-        title: 'Description',
+        title: 'A Simple Guide to Mushifier!',
         headerStyle: {
           backgroundColor: '#4C3D35',
         },
@@ -33,14 +33,19 @@ class DescriptionScreen extends React.Component {
                 },
 
     };
+
   render() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor:'#4C3D35'  }}>
-        <Text style= {{fontFamily: 'Noteworthy-Bold', fontSize: 50, color:'white'}}> Hi Cibi
+        <Text style= {{fontFamily: 'Noteworthy-Bold', fontSize: 18, color:'white'}}>
+          WELCOME TO MUSHIFIER!
+
+          This guide is for Mushroom lovers who now want to know the best Mushrooms.
+
         </Text>
       </View>
     );
   }
 }
 
-export default DescriptionScreen;
+export default HelpScreen;

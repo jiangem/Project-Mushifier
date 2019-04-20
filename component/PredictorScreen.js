@@ -36,28 +36,28 @@ class PredictorScreen extends React.Component {
     };
 
     predict() {
-      const tfImageRecognition = new TfImageRecognition({
-        model: require('../assets/retrained_graph.pb'),
-        labels: require('../assets/retrained_labels.txt'),
-      })
-      
-      const results = tfImageRecognition.recognize({
-        image: require('../assets/images/index/Agaricales.jpg'),
-      })
-      
-      results.forEach(result =>
-        console.log(
-          result.id, // Id of the result
-          result.name, // Name of the result
-          result.confidence // Confidence value between 0 - 1
-      )
-    )
-      
-    tfImageRecognition.close() // Necessary in order to release objects on native side
-    return results
+    //   const tfImageRecognition = new TfImageRecognition({
+    //     model: require('../assets/retrained_graph.pb'),
+    //     labels: require('../assets/retrained_labels.txt'),
+    //   })
+    //
+    //   const results = tfImageRecognition.recognize({
+    //     image: require('../assets/images/index/Agaricales.jpg'),
+    //   })
+    //
+    //   results.forEach(result =>
+    //     console.log(
+    //       result.id, // Id of the result
+    //       result.name, // Name of the result
+    //       result.confidence // Confidence value between 0 - 1
+    //   )
+    // )
+    //
+    // tfImageRecognition.close() // Necessary in order to release objects on native side
+    // return results
 
     }
-    
+
   render() {
     const image = this.props.navigation.getParam('image', '../assets/images/fp_index.png');
     console.log(typeof image);
