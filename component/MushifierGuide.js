@@ -12,45 +12,36 @@ import {
   View,
   Button
 } from 'react-native';
+import { WebBrowser } from 'expo';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
-class DescriptionScreen extends React.Component {
+class MushifierGuide extends React.Component {
   static navigationOptions = {
-        title: 'Description',
+        title: 'Guide',
         headerStyle: {
           backgroundColor: '#4C3D35',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
             fontWeight: 'bold',
-                   },
+            fontFamily: 'Noteworthy-Bold'
+        },
         headerBackTitle: 'Home',
         headerBackTitleStyle: {
                     fontWeight: 'bold',
-                                   },
-
+                    fontFamily: 'Noteworthy-Bold'
+                },
     };
+
   render() {
-    const name = this.props.navigation.getParam('name', 'Basic Boba Mushroom');
-    const image = this.props.navigation.getParam('image', '../assets/images/fp_index.png)');
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor:'#4C3D35'  }}>
-        <Text style= {{ fontSize: 50, color:'white'}}> {name}
+        <Text style= {{fontFamily: 'Noteworthy-Bold', fontSize: 18, color:'white'}}>
+          WELCOME TO MUSHIFIER!
         </Text>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        width: undefined,
-        height: undefined,
-        backgroundColor: 'transparent',
-        justifyContent: 'center',
-        alignItems: "center"
-    }
-})
-
-export default DescriptionScreen;
+export default MushifierGuide;

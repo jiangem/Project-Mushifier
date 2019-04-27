@@ -68,6 +68,19 @@ class HomeScreen extends React.Component {
           </TouchableOpacity>
 
         </View>
+
+        <View style={{flex: 4, flexDirection:'row', justifyContent: 'flex-end', alignItems: 'center', paddingRight: 30}}>
+
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('Help')} >
+            <Image source={
+              require('../assets/icon.png')
+            }
+            style={{width: 50, height: 50}}>
+            </Image>
+          </TouchableOpacity>
+
+        </View>
+
       </ImageBackground>
     );
   }
