@@ -19,7 +19,8 @@ import IndexScreen from './component/IndexScreen.js'
 import SearchScreen from './component/SearchScreen.js'
 import PredictorScreen from './component/PredictorScreen.js'
 import DescriptionScreen from './component/DescriptionScreen'
-import HelpScreen from './component/HelpScreen';
+import HelpScreen from './component/HelpScreen'
+import MushifierGuide from './component/MushifierGuide';
 
 
 const styles = StyleSheet.create({
@@ -39,6 +40,7 @@ const MainNavigator = createStackNavigator({
   Predictor:{screen:PredictorScreen},
   Description:{screen:DescriptionScreen},
   Help:{screen:HelpScreen},
+  Guide:{screen:MushifierGuide},
 });
 
 const App = createAppContainer(MainNavigator);
