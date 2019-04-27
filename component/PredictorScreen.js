@@ -12,7 +12,6 @@ import {
   View,
   Button
 } from 'react-native';
-import { WebBrowser, Asset } from 'expo';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import { TfImageRecognition } from 'react-native-tensorflow';
 
@@ -25,12 +24,10 @@ class PredictorScreen extends React.Component {
         headerTintColor: '#fff',
         headerTitleStyle: {
             fontWeight: 'bold',
-            fontFamily: 'Noteworthy-Bold'
         },
         headerBackTitle: 'Camera',
         headerBackTitleStyle: {
             fontWeight: 'bold',
-            fontFamily: 'Noteworthy-Bold'
         },
 
     };
@@ -69,7 +66,12 @@ class PredictorScreen extends React.Component {
           } style={{width: 250, height: 400}}>
         </Image>
       </View>
-    );er
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor:'#4C3D35' }}>
+        <Text style= {{fontSize: 50, color:'white'}}>
+           hello emma
+        </Text>
+      </View>
+    );
   }
 }
 

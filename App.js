@@ -10,7 +10,6 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { WebBrowser } from 'expo';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import HomeScreen from './component/HomeScreen'
 import CameraScreen from './component/CameraScreen.js'

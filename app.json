@@ -1,35 +1,4 @@
 {
-  "expo": {
-    "name": "mushifier",
-    "description": "This project is really great.",
-    "slug": "mushifier",
-    "privacy": "public",
-    "sdkVersion": "30.0.0",
-    "packagerOpts": {
-      "assetExts": ["pd", "txt"]
-    },
-    "platforms": ["ios", "android"],
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.Mushifier.Mushifier"
-    },
-    "android": {
-      "package": "com.Mushifier.Mushifier"
-    }
-  }
+  "name": "empty-project-template",
+  "displayName": "empty-project-template"
 }

@@ -1,23 +1,22 @@
 {
   "name": "empty-project-template",
-  "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "eject": "expo eject"
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^1.0.4",
     "child-process": "^1.0.2",
     "event": "^1.0.0",
     "events": "^3.0.0",
-    "expo": "^30.0.1",
     "expo-cli": "^2.14.0",
+    "expokit": "^1.8.0",
     "react": "16.3.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
+    "react-native": "^0.59.4",
     "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera.git",
+    "react-native-cli": "^2.0.1",
     "react-native-searchbar": "^1.15.0",
     "react-native-tensorflow": "^0.1.8",
     "react-native-vector-icons": "^6.4.2",

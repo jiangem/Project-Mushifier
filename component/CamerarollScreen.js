@@ -14,7 +14,6 @@ import {
   ViewPhotos,
   Button
 } from 'react-native';
-import { WebBrowser } from 'expo';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import {Permissions } from 'expo';
 

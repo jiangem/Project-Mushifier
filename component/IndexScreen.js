@@ -12,7 +12,6 @@ import {
   View,
   Button
 } from 'react-native';
-import { WebBrowser } from 'expo';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 class IndexScreen extends React.Component {
@@ -24,11 +23,9 @@ class IndexScreen extends React.Component {
         headerTintColor: '#fff',
         headerTitleStyle: {
             fontWeight: 'bold',
-            fontFamily: 'Noteworthy-Bold'
         },
         headerBackTitleStyle: {
             fontWeight: 'bold',
-            fontFamily: 'Noteworthy-Bold'
         },
 
     };

@@ -24,12 +24,10 @@ class CameraScreen extends React.Component {
         headerTintColor: '#fff',
         headerTitleStyle: {
             fontWeight: 'bold',
-            fontFamily: 'Noteworthy-Bold'
         },
         headerBackTitle: 'Camera',
         headerBackTitleStyle: {
             fontWeight: 'bold',
-            fontFamily: 'Noteworthy-Bold'
         },
 
     };

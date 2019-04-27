@@ -12,7 +12,6 @@ import {
   View,
   Button
 } from 'react-native';
-import { WebBrowser } from 'expo';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 class HomeScreen extends React.Component {
