@@ -45,7 +45,6 @@ export default class SearchScreen extends React.Component {
       results: []
     };
     this._handleResults = this._handleResults.bind(this);
-    this.counter = { count: 0 }
   }
 
   _handleResults(results) {
